@@ -24,5 +24,6 @@ urlpatterns = [
     # path('accounts/login/', views.LoginView.as_view(template_name=login.html), name='login'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/login/', views.LoginView.as_view(template_name='blog/registration/login.html')),
+    path('accounts/logout/', views.LogoutView.as_view()),
     path('', include('blog.urls')),
 ]
